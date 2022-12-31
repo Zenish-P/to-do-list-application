@@ -49,6 +49,7 @@ Header.defaultProps = {
   title: "Your Title here",
   searchBar: true
 }
+
 Header.propsTypes = {
   title: PropTypes.string,
   searchBar: PropTypes.bool.isRequired

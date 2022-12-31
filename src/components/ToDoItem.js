@@ -1,7 +1,14 @@
 import React from 'react'
 
-export const ToDoItem = () => {
+// here destructuring is used instead of props 
+// destructuring is similar to parameters in java
+// to replace with props just use props in the class parameter and replace individual objects with props.objectName
+export const ToDoItem = ({todo, onDelete}) => {
   return (
-    <div>ToDoItem works</div>
+    <div>
+      <h4>{todo.title}</h4>
+      <p>{todo.description}</p>
+      <button type="button" className="btn btn-sm btn-primary" onClick={()=>{onDelete(todo)}}>Mark as done</button>
+    </div>
   )
 }
