@@ -21,6 +21,26 @@ function App() {
       Id:3,
       title: " Add authentication",
       description:"Add ability to create and login to accounts." 
+    },
+    {
+      Id:4,
+      title: " Add authentication",
+      description:"Add ability to create and login to accounts." 
+    },
+    {
+      Id:5,
+      title: " Add authentication",
+      description:"Add ability to create and login to accounts." 
+    },
+    {
+      Id:6,
+      title: " Add authentication",
+      description:"Add ability to create and login to accounts." 
+    },
+    {
+      Id:7,
+      title: " Add authentication",
+      description:"Add ability to create and login to accounts." 
     }
   ]);
 
