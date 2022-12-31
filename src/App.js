@@ -22,8 +22,10 @@ function App() {
     }
   ]
 
-  const onDelete = ()=>{
-    console.log("I am onDelete");
+  const onDelete = (todo) =>{
+    console.log("I am onDelete of Item ", todo);
+    let index = tasks.indexOf(todo);
+    tasks.splice(index,1);
   }
 
   return (
