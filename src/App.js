@@ -3,8 +3,10 @@ import './App.css';
 import Header from './components/Header';
 import {ListToDos} from './components/ListToDos';
 import {Footer} from './components/Footer';
+import React, { useState } from 'react';
+
 function App() {
-  let tasks = [
+  const [tasks, setTasks] = useState( [
     {
       Id:1,
       title: "Basic taskList",
@@ -20,12 +22,15 @@ function App() {
       title: " Add authentication",
       description:"Add ability to create and login to accounts." 
     }
-  ]
+  ]);
 
   const onDelete = (todo) =>{
     console.log("I am onDelete of Item ", todo);
-    let index = tasks.indexOf(todo);
-    tasks.splice(index,1);
+    // let index = tasks.indexOf(todo);
+    // tasks.splice(index,1);
+    setTasks(tasks.filter((e)=>{
+      return e !==todo;
+    }))
   }
 
   return (
@@ -35,6 +40,7 @@ function App() {
     <Footer/>
     </>
   );
+
 }
 
 export default App;
