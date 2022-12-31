@@ -1,13 +1,14 @@
 import React from 'react'
 
 export const Footer = () => {
-  let footerStyle = {
-    position: "sticky",
-    top: "100vh",
-    width: "100%",
-  };
+  // let footerStyle = {
+  //   position: "relative",
+  //   width: "100%",
+  //   top: "36vh",
+  // };
   return (
-    <footer className="bg-dark text-light py-2" style={footerStyle}>
+    //style={footerStyle}
+    <footer className="bg-dark text-light py-2" >
       <p className="text-center">    Copyright &copy; Zenish Patel </p>
     </footer>
   )
