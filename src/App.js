@@ -4,14 +4,15 @@ import Header from './components/Header';
 import { ListToDos } from './components/ListToDos';
 import { Footer } from './components/Footer';
 import { AddTask } from './components/AddTask';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { cleanup } from '@testing-library/react';
 
 function App() {
- let initTask;
-  if(localStorage.getItem("tasks")===null){
-    initTask=[];
-  }else{
-    initTask= JSON.parse(localStorage.getItem("tasks"));
+  let initTask;
+  if (localStorage.getItem("tasks") === null) {
+    initTask = [];
+  } else {
+    initTask = JSON.parse(localStorage.getItem("tasks"));
   }
 
   const [tasks, setTasks] = useState(initTask);
@@ -40,10 +41,11 @@ function App() {
     }
     setTasks([...tasks, myTask]);
     console.log(myTask);
-
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-
   }
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks])
+
 
   return (
     <>
