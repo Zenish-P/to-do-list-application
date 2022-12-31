@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import {ListToDos} from './components/ListToDos';
 import {Footer} from './components/Footer';
+import { AddTask } from './components/AddTask';
 import React, { useState } from 'react';
 
 function App() {
@@ -52,10 +53,13 @@ function App() {
       return e !==todo;
     }))
   }
-
+  const addTask=(title,description)=>{
+    console.log("Adding this to list with title and desc as ",title,description);
+  }
   return (
     <>
     <Header title = "My ToDos List" searchBar = {false}/>   
+    <AddTask addTask={addTask}/>
     <ListToDos list = {tasks} onDelete = {onDelete}/>
     <Footer/>
     </>
