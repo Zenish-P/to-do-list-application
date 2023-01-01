@@ -1,11 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import { ListToDos } from './components/ListToDos';
 import { Footer } from './components/Footer';
 import { AddTask } from './components/AddTask';
 import React, { useState, useEffect } from 'react';
-import { cleanup } from '@testing-library/react';
+import { About } from './components/About';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   let initTask;
@@ -49,13 +54,15 @@ function App() {
 
   return (
     <>
-      <Header title="My ToDos List" searchBar={false} />
-      <AddTask addTask={addTask} />
-      <ListToDos list={tasks} onDelete={onDelete} />
-      <Footer />
+      <Router>
+        <Header title="My ToDos List" searchBar={false} />
+        <AddTask addTask={addTask} />
+        <ListToDos list={tasks} onDelete={onDelete} />
+       <Footer/>
+        {/* <About /> */}
+      </Router>
     </>
   );
-
 }
 
 export default App;
