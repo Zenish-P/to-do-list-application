@@ -20,13 +20,13 @@ export const AddTask = (props) => {
     let addTaskContainerStyle={
         border: '2px solid #a8a9ad',
         borderRadius:'10px',
-        backgroundColor:'#f0f0f1'
+        backgroundColor:'#f0f0f1',
     }
     let labelStyle={
         fontSize:"18px"
     }
     return (
-        <div className="container my-3 py-2" style={addTaskContainerStyle}>
+        <div className="container  py-2" style={addTaskContainerStyle}>
             <h3>Add a Task</h3>
             <form onSubmit={submit}>
                 <div className="mb-3">
