@@ -2,7 +2,7 @@ import React from 'react'
 import { ToDoItem } from './ToDoItem'
 export const ListToDos = (props) => {
   let myStyle = {
-    minHeight: "65vh",
+    minHeight: "5vh",
     margin: "10px auto"
   }
   return (

@@ -56,9 +56,9 @@ function App() {
     <>
       <Router>
         <Header title="My ToDos List" searchBar={false} />
-        <AddTask addTask={addTask} />
         <ListToDos list={tasks} onDelete={onDelete} />
-       <Footer/>
+        <AddTask addTask={addTask} />
+       {/* <Footer/> */}
         {/* <About /> */}
       </Router>
     </>
